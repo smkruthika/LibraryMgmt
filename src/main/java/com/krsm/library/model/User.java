@@ -14,10 +14,10 @@ public class User {
     private String firstName;
     private String lastName;
     private String address;
-//    @ManyToMany(mappedBy = "user")
-//    private Set<Book> book;
-//    @OneToOne
-//    private Role role;
+    @ManyToMany(mappedBy = "user")
+    private Set<Book> book;
+    @OneToOne
+    private Role role;
 //    @ManyToMany
 //    @JoinTable(name = "user_bookKeepings",
 //        joinColumns = @JoinColumn(name = "bookKeeping_id"),

@@ -12,6 +12,6 @@ public class Copies {
     private long id;
     private int noOfCopyCurrent;
     private int noOfCopyActual;
-//    @OneToOne
-//    private Book book;
+    @OneToOne
+    private Book book;
 }

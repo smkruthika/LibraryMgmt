@@ -11,6 +11,6 @@ public class Category {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
     private String type;
-//    @OneToOne
-//    private Book book;
+    @OneToOne
+    private Book book;
 }

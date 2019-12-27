@@ -16,6 +16,6 @@ public class BookKeeping {
     private Date returnDate;
     private Date actualReturnDate;
     private int penalty;
-//    @ManyToMany(mappedBy = "bookkeeping")
-//    private Set<User> user;
+    @OneToOne
+    private Book book;
 }

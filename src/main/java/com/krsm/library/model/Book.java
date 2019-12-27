@@ -14,13 +14,15 @@ public class Book {
     private long isbn;
     private String title;
     private String publisher;
-//    @OneToOne
-//    private Category category;
-//    @OneToOne
-//    private Copies copies;
-//    @ManyToMany
-//    @JoinTable(name = "book_users",
-//            joinColumns = @JoinColumn(name = "book_id"),
-//            inverseJoinColumns = @JoinColumn(name = "user.id"))
-//    private Set<User> user;
+    @OneToOne
+    private Category category;
+    @OneToOne
+    private Copies copies;
+    @OneToOne
+    private BookKeeping bookKeeping;
+    @ManyToMany
+    @JoinTable(name = "book_users",
+            joinColumns = @JoinColumn(name = "book_id"),
+            inverseJoinColumns = @JoinColumn(name = "user.id"))
+    private Set<User> user;
 }
