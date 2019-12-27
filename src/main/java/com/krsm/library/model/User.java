@@ -1,9 +1,12 @@
 package com.krsm.library.model;
 
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import lombok.Data;
 
+import javax.persistence.*;
+import java.util.Set;
+
+@Entity
+@Data
 public class User {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -11,45 +14,13 @@ public class User {
     private String firstName;
     private String lastName;
     private String address;
-    private Role role;
-
-    public long getId() {
-        return id;
-    }
-
-    public void setId(long id) {
-        this.id = id;
-    }
-
-    public String getFirstName() {
-        return firstName;
-    }
-
-    public void setFirstName(String firstName) {
-        this.firstName = firstName;
-    }
-
-    public String getLastName() {
-        return lastName;
-    }
-
-    public void setLastName(String lastName) {
-        this.lastName = lastName;
-    }
-
-    public String getAddress() {
-        return address;
-    }
-
-    public void setAddress(String address) {
-        this.address = address;
-    }
-
-    public Role getRole() {
-        return role;
-    }
-
-    public void setRole(Role role) {
-        this.role = role;
-    }
+//    @ManyToMany(mappedBy = "user")
+//    private Set<Book> book;
+//    @OneToOne
+//    private Role role;
+//    @ManyToMany
+//    @JoinTable(name = "user_bookKeepings",
+//        joinColumns = @JoinColumn(name = "bookKeeping_id"),
+//        inverseJoinColumns = @JoinColumn(name = "user_id"))
+//    private Set<BookKeeping> bookKeeping;
 }
